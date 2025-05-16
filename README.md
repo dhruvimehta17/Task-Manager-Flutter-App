@@ -12,26 +12,19 @@ A responsive and modern Flutter app for managing personal or team tasks, built u
 
 # Setup Instructions
 1. Prerequisites
-
-Flutter SDK (3.x recommended)
-
-Dart
-
-Code editor (VS Code or Android Studio)
-
-Internet (if using remote API)
+- Flutter SDK (3.x recommended)
+- Dart
+- Code editor (VS Code or Android Studio)
+- Internet (if using remote API)
 
 2. Install dependencies
-
-flutter pub get
+- flutter pub get
 
 3. Generate Hive adapters
-
-flutter packages pub run build_runner build
+- flutter packages pub run build_runner build
 
 4. Run the app
-
-flutter run -d chrome
+- flutter run -d chrome
 
 or
 
@@ -39,17 +32,11 @@ flutter run -d emulator-5554
 
 
 API Endpoints (Optional)
-
-If using a remote API like crudcrud.com:
-
-GET /tasks – fetch all tasks
-
-POST /tasks – add a new task
-
-PUT /tasks/:id – update task
-
-DELETE /tasks/:id – delete task
-
+- If using a remote API like crudcrud.com:
+- GET /tasks – fetch all tasks
+- POST /tasks – add a new task
+- PUT /tasks/:id – update task
+- DELETE /tasks/:id – delete task
 
 Update your task_api_service.dart with:
 
@@ -62,23 +49,23 @@ lib/
 
 ├── data/
 
-│   ├── models/           # Task model with Hive & JSON support
+│   ├── models/           
 
-│   ├── datasources/      # Hive/local and API services
+│   ├── datasources/      
 
-│   └── repositories/     # Abstraction layer
+│   └── repositories/     
 
 ├── logic/
 
-│   └── cubits/           # BLoC Cubit + states
+│   └── cubits/           
 
 ├── presentation/
 
-│   ├── screens/          # UI screens
+│   ├── screens/          
 
-│   └── widgets/          # (optional) reusable UI widgets
+│   └── widgets/          
 
-├── main.dart             # App entry
+├── main.dart             
 
 # Testing Instructions
 Unit Tests
@@ -96,12 +83,8 @@ Manual Testing
 - Check offline behavior (Hive only mode)
 
 # Usage Instructions
-Tap ➕ to add a task
-
-Tap a task to edit
-
-Tap 🗑️ to delete (with confirmation)
-
-Tasks are sorted by priority (1 is highest)
-
-Status: Pending / In Progress / Done
+- Tap ➕ to add a task
+- Tap a task to edit
+- Tap 🗑️ to delete (with confirmation)
+- Tasks are sorted by priority (1 is highest)
+- Status: Pending / In Progress / Done
