@@ -26,7 +26,7 @@ flutter packages pub run build_runner build
 
 4. Run the app
 flutter run -d chrome
-# or
+or
 flutter run -d emulator-5554
 
 API Endpoints (Optional)
