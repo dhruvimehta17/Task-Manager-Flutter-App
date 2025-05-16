@@ -11,55 +11,83 @@ A responsive and modern Flutter app for managing personal or team tasks, built u
 - Snackbar & confirmation feedback
 
 # Setup Instructions
-
 1. Prerequisites
+
 Flutter SDK (3.x recommended)
+
 Dart
+
 Code editor (VS Code or Android Studio)
+
 Internet (if using remote API)
 
 2. Install dependencies
+
 flutter pub get
 
 3. Generate Hive adapters
+
 flutter packages pub run build_runner build
 
 4. Run the app
+
 flutter run -d chrome
+
 or
+
 flutter run -d emulator-5554
 
+
 API Endpoints (Optional)
+
 If using a remote API like crudcrud.com:
+
 GET /tasks – fetch all tasks
+
 POST /tasks – add a new task
+
 PUT /tasks/:id – update task
+
 DELETE /tasks/:id – delete task
 
+
 Update your task_api_service.dart with:
+
 const apiUrl = 'https://crudcrud.com/api/YOUR_API_KEY_HERE';
 
 # Architecture Overview
 Layered Structure:
 
 lib/
+
 ├── data/
+
 │   ├── models/           # Task model with Hive & JSON support
+
 │   ├── datasources/      # Hive/local and API services
+
 │   └── repositories/     # Abstraction layer
+
 ├── logic/
+
 │   └── cubits/           # BLoC Cubit + states
+
 ├── presentation/
+
 │   ├── screens/          # UI screens
+
 │   └── widgets/          # (optional) reusable UI widgets
+
 ├── main.dart             # App entry
 
 # Testing Instructions
 Unit Tests
+
 Create unit tests under /test directory for:
 - Task repository
 - Cubit logic
 - Run:
+
 flutter test
 
 Manual Testing
@@ -69,7 +97,11 @@ Manual Testing
 
 # Usage Instructions
 Tap ➕ to add a task
+
 Tap a task to edit
+
 Tap 🗑️ to delete (with confirmation)
+
 Tasks are sorted by priority (1 is highest)
+
 Status: Pending / In Progress / Done
