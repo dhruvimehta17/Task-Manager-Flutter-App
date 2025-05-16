@@ -12,19 +12,26 @@ A responsive and modern Flutter app for managing personal or team tasks, built u
 
 # Setup Instructions
 1. Prerequisites
-- Flutter SDK (3.x recommended)
-- Dart
-- Code editor (VS Code or Android Studio)
-- Internet (if using remote API)
+
+Flutter SDK (3.x recommended)
+
+Dart
+
+Code editor (VS Code or Android Studio)
+
+Internet (if using remote API)
 
 2. Install dependencies
-- flutter pub get
+
+flutter pub get
 
 3. Generate Hive adapters
-- flutter packages pub run build_runner build
+
+flutter packages pub run build_runner build
 
 4. Run the app
-- flutter run -d chrome
+
+flutter run -d chrome
 
 or
 
